@@ -966,51 +966,6 @@
                   }
                 }
               },
-              "Deployment": {
-                "id": "Deployment",
-                "path": "ApiLambdaCrudDynamoDBExample/itemsApi/Deployment",
-                "children": {
-                  "Resource": {
-                    "id": "Resource",
-                    "path": "ApiLambdaCrudDynamoDBExample/itemsApi/Deployment/Resource",
-                    "attributes": {
-                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::Deployment",
-                      "aws:cdk:cloudformation:props": {
-                        "restApiId": {
-                          "Ref": "itemsApi28111E1C"
-                        },
-                        "description": "Automatically created by the RestApi construct"
-                      }
-                    }
-                  }
-                }
-              },
-              "DeploymentStage.prod": {
-                "id": "DeploymentStage.prod",
-                "path": "ApiLambdaCrudDynamoDBExample/itemsApi/DeploymentStage.prod",
-                "children": {
-                  "Resource": {
-                    "id": "Resource",
-                    "path": "ApiLambdaCrudDynamoDBExample/itemsApi/DeploymentStage.prod/Resource",
-                    "attributes": {
-                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::Stage",
-                      "aws:cdk:cloudformation:props": {
-                        "restApiId": {
-                          "Ref": "itemsApi28111E1C"
-                        },
-                        "deploymentId": {
-                          "Ref": "itemsApiDeploymentFEC31BD0463f2f0ae75a8bce473f7bfda7158ff8"
-                        },
-                        "stageName": "prod"
-                      }
-                    }
-                  }
-                }
-              },
-              "Endpoint": {
-                "id": "Endpoint",
-                "path": "ApiLambdaCrudDynamoDBExample/itemsApi/Endpoint"
-              },
               "CloudWatchRole": {
                 "id": "CloudWatchRole",
                 "path": "ApiLambdaCrudDynamoDBExample/itemsApi/CloudWatchRole",
@@ -1066,6 +1021,51 @@
                     }
                   }
                 }
+              },
+              "Deployment": {
+                "id": "Deployment",
+                "path": "ApiLambdaCrudDynamoDBExample/itemsApi/Deployment",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "ApiLambdaCrudDynamoDBExample/itemsApi/Deployment/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::Deployment",
+                      "aws:cdk:cloudformation:props": {
+                        "restApiId": {
+                          "Ref": "itemsApi28111E1C"
+                        },
+                        "description": "Automatically created by the RestApi construct"
+                      }
+                    }
+                  }
+                }
+              },
+              "DeploymentStage.prod": {
+                "id": "DeploymentStage.prod",
+                "path": "ApiLambdaCrudDynamoDBExample/itemsApi/DeploymentStage.prod",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "ApiLambdaCrudDynamoDBExample/itemsApi/DeploymentStage.prod/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::ApiGateway::Stage",
+                      "aws:cdk:cloudformation:props": {
+                        "restApiId": {
+                          "Ref": "itemsApi28111E1C"
+                        },
+                        "deploymentId": {
+                          "Ref": "itemsApiDeploymentFEC31BD04feb54db86e2f8eed94e1b28001143ce"
+                        },
+                        "stageName": "prod"
+                      }
+                    }
+                  }
+                }
+              },
+              "Endpoint": {
+                "id": "Endpoint",
+                "path": "ApiLambdaCrudDynamoDBExample/itemsApi/Endpoint"
               },
               "Default": {
                 "id": "Default",
@@ -1480,7 +1480,7 @@
                                           {
                                             "Ref": "itemsApiDeploymentStageprodE77B897D"
                                           },
-                                          "/GET/items/{id}"
+                                          "/GET/items/*"
                                         ]
                                       ]
                                     }
@@ -1521,7 +1521,7 @@
                                           {
                                             "Ref": "itemsApi28111E1C"
                                           },
-                                          "/test-invoke-stage/GET/items/{id}"
+                                          "/test-invoke-stage/GET/items/*"
                                         ]
                                       ]
                                     }
@@ -1616,7 +1616,7 @@
                                           {
                                             "Ref": "itemsApiDeploymentStageprodE77B897D"
                                           },
-                                          "/PATCH/items/{id}"
+                                          "/PATCH/items/*"
                                         ]
                                       ]
                                     }
@@ -1657,7 +1657,7 @@
                                           {
                                             "Ref": "itemsApi28111E1C"
                                           },
-                                          "/test-invoke-stage/PATCH/items/{id}"
+                                          "/test-invoke-stage/PATCH/items/*"
                                         ]
                                       ]
                                     }
@@ -1752,7 +1752,7 @@
                                           {
                                             "Ref": "itemsApiDeploymentStageprodE77B897D"
                                           },
-                                          "/DELETE/items/{id}"
+                                          "/DELETE/items/*"
                                         ]
                                       ]
                                     }
@@ -1793,7 +1793,7 @@
                                           {
                                             "Ref": "itemsApi28111E1C"
                                           },
-                                          "/test-invoke-stage/DELETE/items/{id}"
+                                          "/test-invoke-stage/DELETE/items/*"
                                         ]
                                       ]
                                     }

@@ -18,9 +18,9 @@
     "typescript": "~3.7.2"
   },
   "dependencies": {
-    "@aws-cdk/aws-apigateway": "1.19.x",
-    "@aws-cdk/aws-dynamodb": "1.19.x",
-    "@aws-cdk/aws-lambda": "1.19.x",
-    "@aws-cdk/core": "1.19.x"
+    "@aws-cdk/aws-apigateway": "1.45.x",
+    "@aws-cdk/aws-dynamodb": "1.45.x",
+    "@aws-cdk/aws-lambda": "1.45.x",
+    "@aws-cdk/core": "1.45.x"
   }
 }
